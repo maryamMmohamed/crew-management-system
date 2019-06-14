@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Information</title>
+	<link rel="stylesheet"  href="css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.6/animate.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet"  href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/hover.css">
+	<link rel="stylesheet" type="text/css" href="css/personal-info.css">
+</head>
+<body>
+
+	<!-- start navbar -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header navbar-left">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand hvr-grow" href="#"><img src="img/avimall_logo.png" width="123px" class="img-responsive"></a>
+    </div>
+
+    <!-- Collect the nav links, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right links">        
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container -->
+</nav>
+<!-- end navbar -->
+
+
+
+<!-- ********************************************************** -->
+
+<section class="home-menu">
+	<div class="container-fluid">
+    <div class="row">
+        <div id="bc1" class="btn-group btn-breadcrumb">
+            <a href="#" class="btn btn-default active"><div>Add Crew Management</div></a>
+            <a href="#" class="btn btn-default"><div>Edit Crew Member Information</div></a>
+            <a href="#" class="btn btn-default"><div>Crew Member Inquiry</div></a>
+            <a href="#" class="btn btn-default"><div>Assign Leave</div></a>
+            <a href="#" class="btn btn-default"><div>Bulk Assign</div>
+            </a>
+            <a href="#" class="btn btn-default"><div>Leave Request</div>
+            </a>
+            <a href="#" class="btn btn-default"><div>Leave List</div>
+            </a>
+            <a href="#" class="btn btn-default"><div>Bulk Update</div></a>
+            <a href="#" class="btn btn-default"><div>Crew Member Termination</div></a>
+        </div>
+	</div>
+    
+</div>
+</section>
+
+<!-- ********************************************************** -->
+
+<section>
+	<div class="container">
+  <h2>Dynamic Tabs</h2>
+  <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Personal Information</a></li>
+    <li><a data-toggle="tab" href="#menu1">Job Details</a></li>
+    <li><a data-toggle="tab" href="#menu2">Flight Experience</a></li>
+    <li><a data-toggle="tab" href="#menu3">Qualifications</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <div class="col-md-6 col-md-offset-2">
+      	<form action="/Application" enctype="multipart/form-data" id="appform" method="post" name="appform"> 
+      	 <div class="panel panel-primary">
+                <!-- <div class="panel-heading">General Information</div> -->
+                <div class="panel-body">
+                    <!-- <p>Please provide the following information about your business.</p> -->
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Employee Id</label>
+                        <input type="text" class="form-control" name="" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Mobile No</label>
+                        <input class="form-control" type="number" name="" required>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <label class="control-label">First Name</label>
+                        <input type="text" class="form-control" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Last Name</label>
+                        <input class="form-control" type="text" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <input class="form-control" type="email" id="EmailAddress" name="EmailAddress" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Date Of Birth</label>
+                        <input class="form-control" type="text" id="datepicker" name="" required>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Nationality</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Brazil</option>
+                            <option value="">Egypt</option>
+                            <option value="">Qatar</option>
+                            <option value="">Bolivia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Marital Status</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Married</option>
+                            <option value="">Single</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Address</label>
+                        <input class="form-control" type="text" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">City</label>
+                        <input class="form-control" type="text" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Zip Code</label>
+                        <input class="form-control" type="number" name="">
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Country</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Brazil</option>
+                            <option value="">Egypt</option>
+                            <option value="">Qatar</option>
+                            <option value="">Bolivia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Passport No</label>
+                        <input class="form-control" type="number" name="" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Languages</label>
+                        <input class="form-control" type="text" name="">
+                    </div>
+                    <div class="form-group col-md-6">
+                    	<label class="control-label"></label>
+                        <select class="form-control" name="">
+                            <option value="">Poor</option>
+                            <option value="">Basic</option>
+                            <option value="">Good</option>
+                            <option value="">Mother Tongue</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <select class="form-control" name="">
+                            <option value="">Poor</option>
+                            <option value="">Basic</option>
+                            <option value="">Good</option>
+                            <option value="">Mother Tongue</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group col-md-6">
+                        <input class="form-control" type="text" name="">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <select class="form-control" name="">
+                            <option value="">Poor</option>
+                            <option value="">Basic</option>
+                            <option value="">Good</option>
+                            <option value="">Mother Tongue</option>
+                        </select>
+                    </div>
+                    <div class="pull-right">
+                    	<button class="btn btn-primary btn-lg" type="submit">Next</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="menu1" class="tab-pane fade">
+      <div class="col-md-6 col-md-offset-2">
+      	<form action="/Application" enctype="multipart/form-data" id="appform" method="post" name="appform"> 
+      	 <div class="panel panel-primary">
+                <!-- <div class="panel-heading">General Information</div> -->
+                <div class="panel-body">
+                    <!-- <p>Please provide the following information about your business.</p> -->
+                    <div class="form-group">
+                        <label class="control-label">Job Id</label>
+                        <input type="text" class="form-control" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Joined Date</label>
+                        <input class="form-control" type="text" id="datepicker2" name="" required>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Group</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Crew Positions</option>
+                            <option value="">Operation Positions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Job Title</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Caption</option>
+                            <option value="">First Officer</option>
+                            <option value="">Flight Attendant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Level</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Cheif Pilot</option>
+                            <option value="">Pilot</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Type</label>
+                        <select class="form-control" name="" required>
+                            <option value="">A124 A4F Antonov</option>
+                            <option value="">A140 A40 Antonov</option>
+                        </select>
+                    </div>
+                    <div class="pull-left">
+                    	<button class="btn btn-primary btn-lg">Back</button>
+                    </div>
+                    <div class="pull-right">
+                    	<button class="btn btn-primary btn-lg" type="submit">Next</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <div class="col-md-6 col-md-offset-2">
+      	<form action="/Application" enctype="multipart/form-data" id="appform" method="post" name="appform"> 
+      	 <div class="panel panel-primary">
+                <!-- <div class="panel-heading">General Information</div> -->
+                <div class="panel-body">
+                    <!-- <p>Please provide the following information about your business.</p> -->
+                    <div class="form-group">
+                        <label class="control-label">Job Id</label>
+                        <input type="text" class="form-control" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Joined Date</label>
+                        <input class="form-control" type="text" id="datepicker2" name="" required>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Group</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Crew Positions</option>
+                            <option value="">Operation Positions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Job Title</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Caption</option>
+                            <option value="">First Officer</option>
+                            <option value="">Flight Attendant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Level</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Cheif Pilot</option>
+                            <option value="">Pilot</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Type</label>
+                        <select class="form-control" name="" required>
+                            <option value="">A124 A4F Antonov</option>
+                            <option value="">A140 A40 Antonov</option>
+                        </select>
+                    </div>
+                    <div class="pull-left">
+                    	<button class="btn btn-primary btn-lg">Back</button>
+                    </div>
+                    <div class="pull-right">
+                    	<button class="btn btn-primary btn-lg" type="submit">Next</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <div class="col-md-6 col-md-offset-2">
+      	<form action="/Application" enctype="multipart/form-data" id="appform" method="post" name="appform"> 
+      	 <div class="panel panel-primary">
+                <!-- <div class="panel-heading">General Information</div> -->
+                <div class="panel-body">
+                    <!-- <p>Please provide the following information about your business.</p> -->
+                    <div class="form-group">
+                        <label class="control-label">Job Id</label>
+                        <input type="text" class="form-control" name="" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Joined Date</label>
+                        <input class="form-control" type="text" id="datepicker2" name="" required>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Group</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Crew Positions</option>
+                            <option value="">Operation Positions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Job Title</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Caption</option>
+                            <option value="">First Officer</option>
+                            <option value="">Flight Attendant</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Level</label>
+                        <select class="form-control" name="" required>
+                            <option value="">Cheif Pilot</option>
+                            <option value="">Pilot</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                     <label class="control-label">Type</label>
+                        <select class="form-control" name="" required>
+                            <option value="">A124 A4F Antonov</option>
+                            <option value="">A140 A40 Antonov</option>
+                        </select>
+                    </div>
+                    <div class="pull-left">
+                    	<button class="btn btn-primary btn-lg">Back</button>
+                    </div>
+                    <div class="pull-right">
+                    	<button class="btn btn-primary btn-lg" type="submit">Next</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+<!-- ********************************************************** -->
+
+
+<footer class="flex-rw">
+  <div class="container">
+  	<div class="row">
+  		
+  <div class="col-md-4">
+  	<ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header">About Pavilion</h4></li>
+    <li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
+    <li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
+    <li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
+
+    <li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOB OPENINGS</a></li>
+
+    <li><a href='/shop/about-show-schedule' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
+  </ul>
+  </div>
+  <div class="col-md-4">
+  	<ul class="footer-list-top">
+    <li>
+      <h4 class="footer-list-header">The Gift Selection</h4></li>
+    <li><a href='/Angels/cat/id/70' class="generic-anchor footer-list-anchor">ANGEL FIGURINES</a></li>
+    <li><a href='/Home-Decor/cat/id/64' class="generic-anchor footer-list-anchor">HOME DECOR</a></li>
+    <li><a href='/Mugs/cat/id/32' class="generic-anchor footer-list-anchor">MUGS</a></li>
+    <li><a href='/Pet-Lover/cat/id/108' class="generic-anchor footer-list-anchor">PET LOVER</a></li>
+    <li><a href='/Ladies-Accessories/cat/id/117' class="generic-anchor footer-list-anchor" target="_blank">HANDBAGS & JEWELRY</a></li>
+  </ul>
+  </div>
+<div class="col-md-4">
+	  <ul class="footer-list-top">
+    <li id='help'>
+      <h4 class="footer-list-header">Please Help Me</h4></li>
+    <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
+    <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+    <li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a></li>
+    <li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
+    <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
+  </ul>
+</div>
+  	</div>
+  </div>
+</footer>
+<!-- ********************************************************** -->
+<section class="sub-footer">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-md-12">
+				&copy;  2018 Crew Management System Egypt - All Rights Reserved 
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ********************************************************** -->
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script> new WOW().init();</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker2" ).datepicker();
+  } );
+  </script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

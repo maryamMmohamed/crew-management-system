@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+	<div class="login-reg-panel">
+		<div class="login-info-box">
+			<h2>Have an account?</h2>
+			<!-- <p>Lorem ipsum dolor sit amet</p>-->			
+			<label id="label-register" for="log-reg-show">Login</label>
+			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+		</div>
+							
+		<div class="register-info-box">
+			<h2>Don't have an account?</h2>
+			<!-- <p>Lorem ipsum dolor sit amet</p> -->
+			<label id="label-login" for="log-login-show" >Register</label>
+			<input type="radio" name="active-log-panel" id="log-login-show">
+		</div>
+							
+		<div class="white-panel">
+			<div class="login-show">
+				<h2>LOGIN</h2>
+				<input type="email" placeholder="Email" required>
+				<input type="password" placeholder="Password" required>
+				
+				<div class="checkbox">
+                   <label><input type="checkbox" name="remember"> Remember me</label> <br>
+                   
+                   <!-- <a href="" data-toggle="modal" data-target="#myModal">Forgot password?</a> -->
+                  	   <!-- Modal -->
+                  
+                </div>
+
+                <input type="button" value="Login">
+                <br><br>
+                
+                  <div class="panel-group">
+				    <div class="panel panel-default">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				          <a data-toggle="collapse" href="#collapse1">Forgot password?</a>
+				        </h4>
+				      </div>
+				      <div id="collapse1" class="panel-collapse collapse">
+				        <div class="panel-body">
+							Please enter below your user name, where you will receive an email with instructions to reset your password
+							<input type="text"  required>
+							<button class="btn btn-default reset">Reset Password</button>
+						</div>
+				        <!-- <div class="panel-footer">Panel Footer</div> -->
+				      </div>
+				    </div>
+				  </div>
+
+
+                
+			</div>
+			<div class="register-show">
+				<h2>REGISTER</h2>
+				<input type="text" placeholder="Full Name" required>
+				<input type="number" placeholder="Phone" required>
+				<input type="email" placeholder="Email" required>
+				<input type="email" placeholder="Confirm Email" required>
+				<input type="password" placeholder="Password" required>
+				<input type="password" placeholder="Confirm Password" required>
+				<input type="button" value="Register">
+			</div>
+		</div>
+	</div>
+
+<script>
+	$(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.login-show').addClass('show-log-panel');
+});
+
+
+$('.login-reg-panel input[type="radio"]').on('change', function() {
+    if($('#log-login-show').is(':checked')) {
+        $('.register-info-box').fadeOut(); 
+        $('.login-info-box').fadeIn();
+        
+        $('.white-panel').addClass('right-log');
+        $('.register-show').addClass('show-log-panel');
+        $('.login-show').removeClass('show-log-panel');
+        
+    }
+    else if($('#log-reg-show').is(':checked')) {
+        $('.register-info-box').fadeIn();
+        $('.login-info-box').fadeOut();
+        
+        $('.white-panel').removeClass('right-log');
+        
+        $('.login-show').addClass('show-log-panel');
+        $('.register-show').removeClass('show-log-panel');
+    }
+});
+
+
+
+</script>
+</body>
+</html>
